@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    background-color: #3a77ca;
+    position: relative;
+    width: 100%;
+}
+
+#logo {
+    width: 50%;
+    margin-bottom: -20px;
+    margin-top: -30px;
+    max-width: 300px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #989ea5;
+}
+
+.form-control {
+    margin-left: 80px;
+    width: 100%; /* Đảm bảo form sử dụng hết chiều rộng */
+    margin-right: 5px;
+}
+
+.flex-grow-1 {
+    margin-top: 5px;
+}
+
+.auth-links a {
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.auth-links a:hover {
+    color: #989ea5;
+}
+
+/* menu */
+.nav-link {
+    margin-right: 100px;
+    margin-left: 100px;
+    color: #351ee8;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.nav-link:hover {
+    color: #989ea5;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-left: 100px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: none;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    color: #000;
+}
+
+.dropdown-item:hover {
+    background-color: #7ab5ef;
+}
+
+/* Phần nút next ở banner */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #7ab5ef;
+}
+
+/* Sản phẩm nổi bật */
+.col-md-3:hover {
+    transform: scale(1.1);
+}
+
+.featured-products {
+    background-color: #d0e2f5;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.featured-products h2 {
+    font-size: 30px;
+    color: #1a3d7c;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #1a3d7c;
+    margin-bottom: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 1rem;
+}
+
+.new-price {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Gợi ý hôm nay */
+.featured-products-1 {
+    background-color: #fff;
+}
+
+.featured-products-1 h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    font-size: 30px;
+    color: #1a3d7c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Đặt nền cho footer */
+.footer {
+    background-color: #3a77ca;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Phần bố cục chính của footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #264c89;
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+/* Cột trong footer */
+.footer-column {
+    flex: 1;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.footer-column p{
+    font-size: 12px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.footer-column h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: #989ea5;
+    /* Màu vàng khi rê chuột */
+}
+
+/* Cột biểu tượng mạng xã hội */
+.social-column {
+    display: flex;
+}
+
+.social-column img:hover {
+    transform: scale(1.1);
+    /* Hiệu ứng phóng to khi rê chuột */
+}
+
+.logo-column h5 {
+    font-size: 22px;
+    margin: 5px 0 0 0;
+}
+
+#fb,
+#tt,
+#ig {
+    width: 50%;
+    margin-top: -40px;
+}
+
+#logo_end {
+    width: 50%;
+    margin-left: 120px;
+    margin-top: -20px;
+}
+
+/* Phần bản quyền */
+.footer-copyright {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-copyright p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: -10px;
+}
+
+/* Đăng nhập */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Canh giữa */
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    text-align: center; /* Center align the text in the header */
+}
+
+.modal-title {
+    color: #343a40;
+    width: 100%; /* Ensure the title takes the full width */
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-control-login {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+}
+

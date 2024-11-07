@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystalies</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="header-wrapper">
+            <header class="p-3 border-bottom">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <a href="../HTML/home.html">
+                                <img src="../IMAGES/logo.png" alt="Logo" id="logo">
+                            </a>
+                        </div>
+                        <div class="flex-grow-1 mx-3">
+                            <form class="d-flex">
+                                <input class="form-control" type="search" placeholder="Bạn cần gì..." aria-label="Search">
+                                <button class="btn btn-light" type="submit">Tìm</button>
+                            </form>
+                        </div>
+                        <div class="d-flex align-items-center me-3">
+                            <div class="auth-links">
+                                <a href="../HTML/register.html">Đăng ký</a>  
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                            </div>
+    
+                            <!-- Login Modal -->
+                            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="loginForm">
+                                                <div class="mb-3">
+                                                    <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                                                    <input type="text" class="form-control-login" id="loginUsername" placeholder="Nhập tên đăng nhập của bạn" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                                    <input type="password" class="form-control-login" id="loginPassword" placeholder="Nhập mật khẩu" required>
+                                                </div>
+                                                <div id="loginError" class="text-danger" style="display: none;">Vui lòng điền tên đăng nhập và mật khẩu.</div>
+                                                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex align-items-center">
+                                <a href="../HTML/user.html" class="me-3">
+                                    <img src="../IMAGES/nha.png" alt="Người dùng" style="height: 50px;">
+                                </a>
+                                <a href="../HTML/cart.html" class="me-3">
+                                    <img src="../IMAGES/giohang.png" alt="Giỏ hàng" style="height: 40px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <div class="container">
+            <div class="text-center">
+                <h1>Đăng Ký</h1>
+            </div>
+        <hr>
+        <form id="registrationForm">
+            <div class="form-group">
+                <input type="text" id="txtHT" class="form-control" placeholder="Họ và Tên">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="txtSDT" class="form-control" placeholder="Số điện thoại">
+            </div>
+            <div class="form-group">
+                <input type="email" id="txtEmail" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="date" id="txtDOB" class="form-control" placeholder="Ngày tháng năm sinh">
+            </div>
+            <div class="form-group">
+                <input type="text" id="txtUsername" class="form-control" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <input type="password" id="txtPassword" class="form-control" placeholder="Mật khẩu">
+            </div>
+            <div class="form-group">
+                <input type="password" id="txtConfirmPassword" class="form-control" placeholder="Nhập lại mật khẩu">
+            </div>
+            <div class="form-check" style="margin-left: 30px;">
+                <input type="checkbox" class="form-check-input" id="acceptTerms" required>
+                <label class="form-check-label" for="acceptTerms">Tôi đã đọc và đồng ý với các điều khoản và điều kiện.</label>
+            </div>
+            <button type="submit" class="btn" id="btn-register" style="margin-top: 20px">Đăng Ký</button>
+        </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Cột 1: Biểu tượng mạng xã hội -->
+                <div class="footer-column social-column">
+                    <a href="#"><img src="../IMAGES/fb.png" alt="Facebook" id="fb"></a>
+                    <a href="#"><img src="../IMAGES/tt.png" alt="Twitter" id="tt"></a>
+                    <a href="#"><img src="../IMAGES/ig.png" alt="Instagram" id="ig"></a>
+                </div>
+
+                <!-- Cột 2: Liên kết nhanh -->
+                <div class="footer-column">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../HTML/user.html">Tài khoản của bạn</a></li>
+                        <li><a href="../HTML/cart.html">Xem đơn hàng</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Cột 3: Thông tin liên hệ -->
+                <div class="footer-column">
+                    <h5>Thông tin liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../HTML/aboutus.html">Về chúng tôi</a></li>
+                        <li><a href="../HTML/owner_info.html">Thông tin công ty</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Cột 4: Logo -->
+                <div class="footer-column logo-column">
+                    <a href="#"><img src="../IMAGES/logo.png" alt="Logo" id="logo_end"></a>
+                </div>
+            </div>
+
+            <!-- Phần bản quyền -->
+            <div class="footer-copyright">
+                <p>Bản quyền thuộc về © Ngọc My, Quốc Sáng</p>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>

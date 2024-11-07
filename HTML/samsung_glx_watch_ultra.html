@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng hồ thông minh Samsung Galaxy Watch Ultra</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/detail.css">
+    <link rel="stylesheet" href="../CSS/filter.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/home.js"></script>
+    <script src="../JS/loadmore.js"></script>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="p-3 border-bottom">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="../HTML/home.html">
+                            <img src="../IMAGES/logo.png" alt="Logo" id="logo">
+                        </a>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Bạn cần gì..." aria-label="Search">
+                            <button class="btn btn-light" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                        <div class="auth-links">
+                            <a href="../HTML/register.html">Đăng ký</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </div>
+
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                                                <input type="text" class="form-control-login" id="loginUsername" placeholder="Nhập tên đăng nhập của bạn" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                                <input type="password" class="form-control-login" id="loginPassword" placeholder="Nhập mật khẩu" required>
+                                            </div>
+                                            <div id="loginError" class="text-danger" style="display: none;">Vui lòng điền tên đăng nhập và mật khẩu.</div>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <a href="../HTML/user.html" class="me-3">
+                                <img src="../IMAGES/nha.png" alt="Người dùng" style="height: 50px;">
+                            </a>
+                            <a href="../HTML/cart.html" class="me-3">
+                                <img src="../IMAGES/giohang.png" alt="Giỏ hàng" style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Loại đồng hồ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/donghothongminh.html">Đồng hồ thông minh</a></li>
+                            <li><a class="dropdown-item" href="../HTML/donghodinhvi.html">Đồng hồ định vị</a></li>
+                            <li><a class="dropdown-item" href="../HTML/daydeo.html">Dây đeo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn thương hiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple.html">Apple Watch</a></li>
+                            <li><a class="dropdown-item" href="../HTML/samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="../HTML/xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="../HTML/garmin.html">Garmin</a></li>
+                            <li><a class="dropdown-item" href="../HTML/amalzit.html">Amalzit</a></li>
+                            <li><a class="dropdown-item" href="../HTML/coros.html">Coros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn theo giá</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/gia_duoi_1tr.html">Dưới 1 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia1_3.html">1 triệu - 3 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia3_5.html">3 triệu - 5 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia5_10.html">5 triệu - 10 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia10_20.html">10 triệu - 20 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia_tren_20tr.html">Trên 20 triệu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Sản phẩm nổi bật</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple_ultra2_filter.html">Apple Watch Ultra 2</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE10_filter.html">Apple Watch Series 10</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE9_filter.html">Apple Watch Series9</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei_FIT3_filter.html">Huawei Watch Fit3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="khung1">
+            <a href="../HTML/home.html">
+                <p>Trang chủ</p>
+            </a>
+            <p> > </p>
+            <a href="../HTML/samsung_glx_watch_ultra.html">
+                <p>Đồng hồ thông minh Samsung Galaxy Watch Ultra</p>
+            </a>
+
+        </div>
+
+        <main>
+            <h3>Chi tiết sản phẩm</h3>
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="main-image" src="../IMAGES/galaxy_ultra.png" alt="Apple Watch Ultra 2">
+                        <section class="product-thumbnails">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/galaxy_watch_ultra/sm-l705_001_front_titanium_silve.webp" alt="Apple Watch Ultra 2 Thumbnail 1"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/galaxy_watch_ultra/sm-l705_003_l_perspective_titani.webp" alt="Apple Watch Ultra 2 Thumbnail 2"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/galaxy_watch_ultra/sm-l705_003_l_perspective_titani_1_.webp" alt="Apple Watch Ultra 2 Thumbnail 3"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/galaxy_watch_ultra/sm-l705_003_l_perspective_titani_2_.webp" alt="Apple Watch Ultra 2 Thumbnail 4"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/galaxy_watch_ultra/image_1075_1_1_1.webp" alt="Apple Watch Ultra 2 Thumbnail 5"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/galaxy_watch_ultra/sm-l705_004_dynamic_titanium_whi.webp" alt="Apple Watch Ultra 2 Thumbnail 6"></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <ul class="product-description">
+                            <h4>Đồng hồ thông minh Samsung Galaxy Watch Ultra</h4>
+                            <li>Khung viền titan cứng cáp, mặt kính sapphire chống xước, sẵn sàng đồng hành cùng bạn trong mọi hoạt động.</li>
+                            <li>Định vị chính xác, hỗ trợ tập luyện chuyên nghiệp, tích hợp GPS băng tần kép, theo dõi lộ trình chính xác, phân tích hiệu suất luyện tập chi tiết.</li>
+                            <li>Kết nối LTE luôn giữ bạn trong tầm tay, thực hiện cuộc gọi, nhắn tin, nhận thông báo mà không cần mang theo điện thoại.</li>
+                            <li>Theo dõi sức khoẻ toàn diện, chuyên sâu: Đo điện tâm đồ (ECG), phân tích thành phần cơ thể, theo dõi giấc ngủ và nhiều hơn thế nữa.</li>
+                        </ul>
+
+
+                        <div class="col-md-6">
+                            <div class="product-container">
+                                <h3>THÔNG TIN THANH TOÁN</h3>
+
+                                <!-- Chọn màu sắc -->
+                                <div class="color-options">
+                                    <h5>Chọn màu sắc:</h5>
+
+                                    <!-- Tùy chọn màu 1 -->
+                                    <div class="color-option-form" onclick="selectColor(this, 'Trắng')">
+                                        <img src="../IMAGES/galaxy_watch_ultra/sm-l705_003_l_perspective_titani_2_.webp" alt="Trắng" style="width: 50px; height: 50px;">
+                                    </div>
+
+                                    <!-- Tùy chọn màu 2 -->
+                                    <div class="color-option-form" onclick="selectColor(this, 'Đỏ')">
+                                        <img src="../IMAGES/galaxy_watch_ultra/sm-l705_003_l_perspective_titani_1_.webp" alt="Đỏ" style="width: 50px; height: 50px;">
+                                    </div>
+
+                                    <!-- Tùy chọn màu 3 -->
+                                    <div class="color-option-form" onclick="selectColor(this, 'Xanh')">
+                                        <img src="../IMAGES/galaxy_watch_ultra/sm-l705_003_l_perspective_titani.webp" alt="Xanh" style="width: 50px; height: 50px;">
+                                    </div>
+                                </div>
+
+                                <!-- Chọn số lượng -->
+                                <div class="quantity-container">
+                                    <h5>Chọn số lượng:</h5>
+                                    <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                                    <span class="quantity-display" id="quantity-display">1</span>
+                                    <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                                </div>
+
+                                <div class="price-container">
+                                    <span class="price-sale">16.990.000 VND</span>
+                                    <span class="price-original">17.090.000 VND</span>
+                                </div>
+                                <!-- Nút thêm vào giỏ hàng và mua ngay -->
+                                <div class="action-buttons-click">
+                                    <button id="add-to-cart" class="btn btn-primary">Thêm vào Giỏ hàng</button>
+                                    <button class="btn btn-success" onclick="buyNow()">Mua ngay</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+        </main>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-between">
+            <section class="detailed-description">
+                <h2>Mô tả chi tiết</h2>
+                <p>Samsung Galaxy Watch Ultra trang bị bộ vi xử lý tiến trình 3nm, 5 lõi mạnh mẽ, cung cấp hiệu năng mượt mà cho mọi tác vụ. Về khả năng hiển thị, Watch Ultra nổi bật với màn hình Super AMOLED độ sáng lên đến 3000 nits, đảm bảo khả năng hiển
+                    thị xuất sắc ngay cả dưới ánh nắng gắt. Đồng thời, màn hình hiện đại này của đồng hồ còn trang bị mặt kính sapphire cao cấp bảo vệ, giúp chống trầy xước tối ưu trước tác động từ bên ngoài. </p>
+                <button id="view-more-btn" class="loadmore">Xem thêm</button>
+                <div id="more-content" style="display: none;">
+                    <h4>Vì sao nên chọn mua đồng hồ Galaxy Watch Ultra?</h4>
+                    <p>Đồng hồ thông minh Samsung Galaxy Watch Ultra được kết hợp ấn tượng giữa thiết kế tinh tế và tính năng hiện đại, hứa hẹn mang lại sự tiện ích và phong cách cho người dùng</p>
+                    <h6>Đánh giá Samsung Watch Ultra - Thiết kế hiện đại, đa dạng tính năng</h6>
+                    <p>Sản phẩm đồng hồ Galaxy Watch Ultra được ra mắt hứa hẹn là một biểu tượng của sự đẳng cấp và công nghệ hiện đại trong thế giới đồng hồ thông minh. Với thiết kế sang trọng và các tính năng tiên tiến, Samsung Galaxy Watch Ultra có thể
+                        đáp ứng hầu hết mọi nhu cầu của người dùng từ việc theo dõi sức khỏe đến thể thao chuyên nghiệp.</p>
+                    <p>Đồng hồ được trang bị hệ thống nút điều khiển vô cùng tiện lợi. Cụ thể, đồng hồ với nút tác vụ với khả năng cài đặt nhiều chức năng sử dụng khác nhau. Các tính năng trên nút tác vụ người dùng có thể tùy chỉnh theo nhu cầu sử dụng như
+                        đánh dấu tọa độ, khởi động bài tập luyện,…</p>
+                    <p>Bên cạnh đó, Galaxy Watch Ultra còn có khả năng chống nước đạt chuẩn 10 ATM / IP68 , như vậy thiết bị có thể kháng nước ở độ sâu đến 100m trong vòng 10 phút (ở điều kiện thử nghiệm, trên thực tế có thể thay đổi). Nhờ vậy mà Samsung
+                        Galaxy Watch phiên bản Ultra càng làm tăng thêm tính linh hoạt và tiện dụng cho người dùng trong các hoạt động hàng ngày.</p>
+                    <div class="img-chitiet">
+                        <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-3.webp" alt="imgchitiet1">
+                    </div>
+                    <h6>Thiết kế sang trọng, kháng nước bền bỉ với tiêu chuẩn 10ATM / IP68</h6>
+                    <p>Samsung Watch Ultra mang lại vẻ đẹp sang trọng và bền bỉ nhờ hoàn thiện mặt trước bằng kính Sapphire, khung viền làm từ titanium cao cấp. Thiết kế này không chỉ tạo nên vẻ ngoài hiện đại và tinh tế mà còn đảm bảo độ bền cao, giúp bảo
+                        vệ đồng hồ khỏi các tác động bên ngoài. </p>
+                    <h6>Linh hoạt luyện tập, theo dõi sức khoẻ với đa dạng các chế độ khác nhau</h6>
+                    <p>Ngoài những điểm cộng về thiết kế và hiệu năng ở trên thì đồng hồ Samsung Galaxy Watch Ultra còn là một trợ thủ đắc lực cho sức khỏe và luyện tập. Với cảm biến tiên tiến, Watch Ultra giúp theo dõi giấc ngủ bao gồm các giai đoạn giấc
+                        ngủ, nhịp tim, lượng oxy trong máu và cả tiếng ngày. Ngoài ra, còn theo dõi huyết áp, và đo lường tiến độ luyện tập với BIA. </p>
+                    <h6>Thời gian sử dụng lên đến 100 giờ</h6>
+                    <p>Samsung Watch Ultra nổi bật với thời lượng pin ấn tượng, đáp ứng mọi nhu cầu hoạt động ngoài trời như leo núi hay trekking nhiều ngày. Đồng hồ này cho phép người dùng chuyển đổi linh hoạt giữa các chế độ pin, bao gồm chế độ tiết kiệm
+                        pin khi tập luyện (Exercise power saving mode) để kéo dài thời lượng pin lên đến 48 giờ khi theo dõi các bài thể thao, và chế độ tiết kiệm pin (Power saving mode) cho thời lượng sử dụng lên đến 100 giờ (ở điều kiện thử nghiệm).</p>
+                    <div class="img-chitiet">
+                        <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-2_1.webp" alt="imgchitiet1">
+                    </div>
+                    <h6> An tâm hơn với tính năng còi báo động an toàn</h6>
+                    <p>Galaxy Watch Ultra trang bị tính năng Còi báo động an toàn, giúp bạn yên tâm hơn trong những tình huống khẩn cấp. Chỉ cần nhấn và giữ Nút nhanh trong 5 giây, đồng hồ sẽ kích hoạt còi báo động với âm lượng 86 decibel, đủ để nghe thấy
+                        từ khoảng cách lên tới 180 mét, thậm chí xuyên qua rừng cây. Khi GPS không đủ để định vị, đồng hồ sẽ phát tín hiệu SOS, đảm bảo bạn được hỗ trợ kịp thời.</p>
+                    <div class="img-chitiet">
+                        <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-1_1.webp" alt="imgchitiet1">
+                    </div>
+                    <p>Galaxy Watch Ultra được tung ra thị trường ngày 10 tháng 7 năm 2024, thiết bị này không chỉ thể hiện sự tiên phong trong công nghệ của Samsung mà còn mở ra một chương mới của Galaxy AI. Được thiết kế với mục tiêu mang lại trải nghiệm
+                        chăm sóc sức khỏe toàn diện cho người dùng, những sản phẩm này hứa hẹn sẽ nâng cao chất lượng cuộc sống hàng ngày.</p>
+            </section>
+            <script src="../JS/loadmore.js"></script>
+            <aside class="related-products">
+                <h2>Sản phẩm liên quan</h2>
+                <ul>
+                    <li>
+                        <a href="../HTML/samsung_glx_fit3.html"><img src="../IMAGES/glx_fit3/group_563.webp" alt="Samsung Galaxy Fit 3"> Samsung Galaxy Fit 3</a>
+                    </li>
+                    <li>
+                        <a href="../HTML/apple_watch_ultra_2.html"><img src="../IMAGES/apple_watch_ultra_2.png" alt="Apple Watch Series 9"> Apple Watch Ultra 2</a>
+                    </li>
+                    <li>
+                        <a href="../HTML/huawei_watch_kids4_pro.html"><img src="../IMAGES/huawei_kids4_.png" alt="Samsung Galaxy Fit 3"> Đồng hồ định vị trẻ em Huawei Watch Kids4 Pro</a>
+                    </li>
+
+                </ul>
+            </aside>
+            </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <!-- Cột 1: Biểu tượng mạng xã hội -->
+                        <div class="footer-column social-column">
+                            <a href="#"><img src="../IMAGES/fb.png" alt="Facebook" id="fb"></a>
+                            <a href="#"><img src="../IMAGES/tt.png" alt="Twitter" id="tt"></a>
+                            <a href="#"><img src="../IMAGES/ig.png" alt="Instagram" id="ig"></a>
+                        </div>
+
+                        <!-- Cột 2: Liên kết nhanh -->
+                        <div class="footer-column">
+                            <h5>Liên kết nhanh</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../HTML/user.html">Tài khoản của bạn</a></li>
+                                <li><a href="../HTML/cart.html">Xem đơn hàng</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Cột 3: Thông tin liên hệ -->
+                        <div class="footer-column">
+                            <h5>Thông tin liên hệ</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../HTML/aboutus.html">Về chúng tôi</a></li>
+                                <li><a href="../HTML/owner_info.html">Thông tin công ty</a></li>
+                            </ul>
+                        </div>
+
+
+                        <!-- Cột 4: Logo -->
+                        <div class="footer-column logo-column">
+                            <a href="#"><img src="../IMAGES/logo.png" alt="Logo" id="logo_end"></a>
+                        </div>
+                    </div>
+
+                    <!-- Phần bản quyền -->
+                    <div class="footer-copyright">
+                        <p>Bản quyền thuộc về © Ngọc My, Quốc Sáng</p>
+                    </div>
+
+                </div>
+            </footer>
+            <script src="../JS/detail.js"></script>
+</body>
+
+</html>

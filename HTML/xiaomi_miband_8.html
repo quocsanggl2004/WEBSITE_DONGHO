@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng đeo tay thông minh Xiaomi Mi Band 8</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/detail.css">
+    <link rel="stylesheet" href="../CSS/filter.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/home.js"></script>
+    <script src="../JS/loadmore.js"></script>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="p-3 border-bottom">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="../HTML/home.html">
+                            <img src="../IMAGES/logo.png" alt="Logo" id="logo">
+                        </a>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Bạn cần gì..." aria-label="Search">
+                            <button class="btn btn-light" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                        <div class="auth-links">
+                            <a href="../HTML/register.html">Đăng ký</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </div>
+
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                                                <input type="text" class="form-control-login" id="loginUsername" placeholder="Nhập tên đăng nhập của bạn" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                                <input type="password" class="form-control-login" id="loginPassword" placeholder="Nhập mật khẩu" required>
+                                            </div>
+                                            <div id="loginError" class="text-danger" style="display: none;">Vui lòng điền tên đăng nhập và mật khẩu.</div>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <a href="../HTML/user.html" class="me-3">
+                                <img src="../IMAGES/nha.png" alt="Người dùng" style="height: 50px;">
+                            </a>
+                            <a href="../HTML/cart.html" class="me-3">
+                                <img src="../IMAGES/giohang.png" alt="Giỏ hàng" style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Loại đồng hồ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/donghothongminh.html">Đồng hồ thông minh</a></li>
+                            <li><a class="dropdown-item" href="../HTML/donghodinhvi.html">Đồng hồ định vị</a></li>
+                            <li><a class="dropdown-item" href="../HTML/daydeo.html">Dây đeo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn thương hiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple.html">Apple Watch</a></li>
+                            <li><a class="dropdown-item" href="../HTML/samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="../HTML/xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="../HTML/garmin.html">Garmin</a></li>
+                            <li><a class="dropdown-item" href="../HTML/amalzit.html">Amalzit</a></li>
+                            <li><a class="dropdown-item" href="../HTML/coros.html">Coros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn theo giá</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/gia_duoi_1tr.html">Dưới 1 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia1_3.html">1 triệu - 3 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia3_5.html">3 triệu - 5 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia5_10.html">5 triệu - 10 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia10_20.html">10 triệu - 20 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia_tren_20tr.html">Trên 20 triệu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Sản phẩm nổi bật</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple_ultra2_filter.html">Apple Watch Ultra 2</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE10_filter.html">Apple Watch Series 10</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE9_filter.html">Apple Watch Series9</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei_FIT3_filter.html">Huawei Watch Fit3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="khung1">
+            <a href="../HTML/home.html">
+                <p>Trang chủ</p>
+            </a>
+            <p> > </p>
+            <a href="../HTML/xiaomi_miband_8.html">
+                <p>Vòng đeo tay thông minh Xiaomi Mi Band 8</p>
+            </a>
+
+        </div>
+
+        <main>
+            <h3>Chi tiết sản phẩm</h3>
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="main-image" src="../IMAGES/xiaomi_band8.png" alt="Apple Watch Ultra 2">
+                        <section class="product-thumbnails">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_1.webp" alt="Apple Watch Ultra 2 Thumbnail 1"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_2.webp" alt="Apple Watch Ultra 2 Thumbnail 2"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_4.webp" alt="Apple Watch Ultra 2 Thumbnail 3"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_6.webp" alt="Apple Watch Ultra 2 Thumbnail 4"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_7.webp" alt="Apple Watch Ultra 2 Thumbnail 5"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_8.webp" alt="Apple Watch Ultra 2 Thumbnail 6"></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <ul class="product-description">
+                            <h4>Vòng đeo tay thông minh Xiaomi Mi Band 8</h4>
+                            <li>Màn hình 1.62'' AMOLED cho chất lượng hiển thị sắc nét</li>
+                            <li>Thời lượng pin lên đến 16 ngày sử dụng - thoả sức tập luyện mà không lo hết pin</li>
+                            <li>Bảo vệ sức khoẻ hằng ngày với tính năng đo nhịp tim, SpO2, giấc ngủ, VO2 max</li>
+                            <li>Kháng nước chuẩn 5ATM, không ngại trời mưa hay nước bắn</li>
+                            <li>Nâng cao hiệu quả tập luyện với hơn 150 chế độ thể thao</li>
+                        </ul>
+
+
+                        <div class="col-md-6">
+                            <div class="product-container">
+                                <h3>THÔNG TIN THANH TOÁN</h3>
+
+                                <!-- Chọn màu sắc -->
+                                <div class="color-options">
+                                    <h5>Chọn màu sắc:</h5>
+
+                                    <!-- Tùy chọn màu 1 -->
+                                    <div class="color-option-form" onclick="selectColor(this, 'Trắng')">
+                                        <img src="../IMAGES/xiaomi_miband/m66-tpu_white-side_45.webp" alt="Trắng" style="width: 50px; height: 50px;">
+                                    </div>
+
+                                    <!-- Tùy chọn màu 2 -->
+                                    <div class="color-option-form" onclick="selectColor(this, 'Đỏ')">
+                                        <img src="../IMAGES/xiaomi_band8.png" alt="Trắng" style="width: 50px; height: 50px;">
+                                    </div>
+
+
+                                </div>
+
+                                <!-- Chọn số lượng -->
+                                <div class="quantity-container">
+                                    <h5>Chọn số lượng:</h5>
+                                    <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                                    <span class="quantity-display" id="quantity-display">1</span>
+                                    <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                                </div>
+
+                                <div class="price-container">
+                                    <span class="price-sale">990.000 VND</span>
+                                    <span class="price-original">790.000 VND</span>
+                                </div>
+                                <!-- Nút thêm vào giỏ hàng và mua ngay -->
+                                <div class="action-buttons-click">
+                                    <button id="add-to-cart" class="btn btn-primary">Thêm vào Giỏ hàng</button>
+                                    <button class="btn btn-success" onclick="buyNow()">Mua ngay</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+        </main>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-between">
+            <section class="detailed-description">
+                <h2>Mô tả chi tiết</h2>
+                <p>Xiaomi Mi Band 8 được trang bị màn hình AMOLED 1.62 inch cùng tần số quét 60Hz, màn hình Always On Display cùng khả năng điều chỉnh độ sáng tự động. Đồng hồ được trang bị khả năng kháng nước 5ATM cùng viên pin cho thời gian sử dụng tới
+                    16 ngày. Mi Band 8 sở hữu khả năng theo dõi nhiều chỉ số sức khỏe như đo nhịp tim, chỉ số giấc ngủ và hỗ trợ tập luyện tới 150 môn thể thao.</p>
+                <button id="view-more-btn" class="loadmore">Xem thêm</button>
+                <div id="more-content" style="display: none;">
+                    <h4>Vòng đeo tay thông minh Xiaomi Mi Band 8 - Kiểu dáng năng động, đa dạng tính năng</h4>
+                    <p>Vòng đeo tay thông minh Mi Band 8 kiến tạo nên vẻ đẹp của sự trẻ trung, năng động với kiểu dáng thời trang. Xiaomi Band 8 này hỗ trợ theo dõi sức khoẻ với nhiều tính năng giám sát thế hệ mới. Cùng với đó là nhiều bài tập giúp rèn luyện
+                        cơ thể, nâng cao thể lực của người dùng. Nếu bạn đang tìm kiếm một phân khúc vòng đeo tay thông minh giá rẻ thì Band 8 là một lựa chọn không thể hoàn hảo hơn.</p>
+                    <h6>Kiểu dáng thời trang cao cấp</h6>
+                    <p>Vòng tay thông minh Mi Band 8 nổi bật với thiết kế năng động hợp thời trang với nhiều mẫu mã khác nhau. Nhờ đó mà phân khúc vòng tay thông minh này phù hợp với nhiều phong cách và sở thích của người dùng.
+                    </p>
+                    <p>Mi Band 8 được nâng cấp với cấu trúc tháo nhanh phần dây đeo. Thiết kế này mang tới trải nghiệm độc đáo, mới lạ cho người dùng khi có thể dễ dàng thoát khỏi và thay thế phần dây đeo hoàn toàn mới. </p>
+                    <p>Bên cạnh đó, Mi Band thế hệ thứ 8 còn khá thu hút khi được hoàn thiện từ chất liệu kim loại sành điệu cùng 2 phiên bản khung viền màu Vàng nhạt và Đen sáng. Với ưu điểm này, Xiaomi Band 8 không chỉ thể hiện sự trẻ trung mà còn truyền
+                        cảm hứng cho phong cách thời trang hiện đại.</p>
+                    <p>
+                        Dây Alpine thích hợp để sử dụng trong các chuyến đi chơi ngoài trời <br> Dây Trail thích hợp sử dụng cho các bài tập luyện <br> Dây Ocean thích hợp sử dụng khi tập luyện các môn thể thao dưới nước <br>
+                    </p>
+                    <div class="img-chitiet">
+                        <img src="../IMAGES/xiaomi_miband/xiaomi_mi_band_8_-_7.webp" alt="imgchitiet1">
+                    </div>
+                    <h6>Đa dạng loại vòng tay độc đáo khác nhau thoả sức cho người dùng lựa chọn</h6>
+                    <p>Bộ sưu tập dây đeo thời trang đa dạng là điểm cộng lớn của Xiaomi Mi Band 8 trong lần ra mắt lần này. Vòng đeo tay thông minh Xiaomi Mi Band 8 sở hữu nhiều phiên bản dây đeo diện mạo mới, tôn vinh sự tự do thời trang của người dùng.
+                    </p>
+                    <p>Với sự đa dạng về kiểu dáng, người tiêu dùng dễ dàng chọn lựa cho mình một phiên bản dây đeo Mi Band 8 phù hợp nhất. Thế hệ vòng tay công nghệ này trải dài trên nhiều gam màu sắc táo bạo. Điều này giúp Mi Band 8 dễ dàng lôi cuốn và
+                        tạo nên nhiều phong cách thời trang độc đáo cho người dùng.</p>
+                    <div class="img-chitiet">
+                        <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-2_1.webp" alt="imgchitiet1">
+                    </div>
+                    <h6>Bền bỉ với chuẩn chống nước, chống bụi cao cấp</h6>
+                    <p>Với việc sở hữu nhiều chế độ thể thao thông minh, tất nhiên Mi Band 8 cũng sẽ được thiết kế với khả năng chống nước, chống bụi đáng tin cậy. Theo đó, sản phẩm sở hữu chuẩn kháng nước lên tới 5 ATM. Thông số này cho phép người dùng
+                        tham gia các hoạt động bơi lội, đi dưới mưa, tắm biển mà không cần lo lắng về việc Mi Band 8 bị ngấm nước hoặc hư hỏng.</p>
+                    <div class="img-chitiet">
+                        <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-1_1.webp" alt="imgchitiet1">
+                    </div>
+                    <p>Ngoài ra, nó còn có khả năng theo dõi nhiều môn thể thao và GPS tần số kép chính xác cao. Dù bạn chạy bộ, leo núi hay lặn biển, chiếc đồng hồ này luôn đảm bảo hiệu suất mạnh mẽ, giúp bạn tập trung hoàn toàn vào việc chinh phục các
+                        mục tiêu của mình.</p>
+            </section>
+            <script src="../JS/loadmore.js"></script>
+            <aside class="related-products">
+                <h2>Sản phẩm liên quan</h2>
+                <ul>
+                    <li>
+                        <a href="../HTML/apple_SE_9_41.html"><img src="../IMAGES/apple_series9.png" alt="Apple Watch Series 9"> Apple Watch Series 9 41mm</a>
+                    </li>
+                    <li>
+                        <a href="../HTML/huawei_watch_kids4_pro.html"><img src="../IMAGES/huawei_kids4_.png" alt="Samsung Galaxy Fit 3"> Đồng hồ định vị trẻ em Huawei Watch Kids4 Pro</a>
+                    </li>
+                    <li>
+                        <a href="../HTML/samsung_glx_watch_ultra.html"><img src="../IMAGES/galaxy_ultra.png" alt="Garmin Venu 3"> Đồng hồ thông minh Galaxy Watch Ultra</a>
+                    </li>
+                </ul>
+            </aside>
+            </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <!-- Cột 1: Biểu tượng mạng xã hội -->
+                        <div class="footer-column social-column">
+                            <a href="#"><img src="../IMAGES/fb.png" alt="Facebook" id="fb"></a>
+                            <a href="#"><img src="../IMAGES/tt.png" alt="Twitter" id="tt"></a>
+                            <a href="#"><img src="../IMAGES/ig.png" alt="Instagram" id="ig"></a>
+                        </div>
+
+                        <!-- Cột 2: Liên kết nhanh -->
+                        <div class="footer-column">
+                            <h5>Liên kết nhanh</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../HTML/user.html">Tài khoản của bạn</a></li>
+                                <li><a href="../HTML/cart.html">Xem đơn hàng</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Cột 3: Thông tin liên hệ -->
+                        <div class="footer-column">
+                            <h5>Thông tin liên hệ</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../HTML/aboutus.html">Về chúng tôi</a></li>
+                                <li><a href="../HTML/owner_info.html">Thông tin công ty</a></li>
+                            </ul>
+                        </div>
+
+
+                        <!-- Cột 4: Logo -->
+                        <div class="footer-column logo-column">
+                            <a href="#"><img src="../IMAGES/logo.png" alt="Logo" id="logo_end"></a>
+                        </div>
+                    </div>
+
+                    <!-- Phần bản quyền -->
+                    <div class="footer-copyright">
+                        <p>Bản quyền thuộc về © Ngọc My, Quốc Sáng</p>
+                    </div>
+
+                </div>
+            </footer>
+            <script src="../JS/detail.js"></script>
+</body>
+
+</html>

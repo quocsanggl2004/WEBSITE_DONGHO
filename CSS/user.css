@@ -1,0 +1,61 @@
+.user {
+    margin-top: 100px;
+    padding: 40px; /* Tăng padding để có không gian rộng rãi hơn */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f9fa; /* Màu nền sáng để tạo độ tương phản tốt hơn */
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden; /* Ẩn phần tràn chiều ngang */
+}
+
+
+#inputLabel {
+    color: #000;
+}
+
+#btnDangNhap {
+    background-color: #ff6600;
+    border: none;
+}
+
+#btnDangNhap:hover {
+    background-color: #e65c00; /* Màu hover tối hơn một chút để tạo hiệu ứng */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px; /* Tạo khoảng cách giữa các phần trong footer để bố cục tốt hơn */
+}
+
+.form-floating {
+    margin-bottom: 20px; /* Tạo khoảng cách giữa các input để dễ nhìn hơn */
+    margin-left: 0px; /* Dịch sang trái một chút để căn lề với các input */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+#logo_end {
+    width: 100px;
+    height: 100px;
+}
+
+#fb, #tt, #ig {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.col-3 {
+    flex: 1;
+    margin-left: 205px;
+}

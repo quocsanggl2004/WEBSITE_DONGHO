@@ -1,0 +1,74 @@
+/* Phần đăng ký */
+#registrationForm {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#registrationForm .form-group {
+    margin-bottom: 25px;
+    width: 530px;
+    margin-left: -50px;
+}
+#registrationForm .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+#registrationForm .form-control:focus {
+    border-color: #3a77ca;
+    box-shadow: 0 0 5px rgba(58, 119, 202, 0.5);
+}
+#registrationForm .form-check-label {
+    font-size: 14px;
+}
+#registrationForm .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3a77ca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#registrationForm .btn:hover {
+    background-color: #2e5d9a;
+}
+#registrationForm .text-center h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+#registrationForm .form-control {
+    width: 100%;
+}
+/* Các lỗi nhập liệu */
+#loginError {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+/* Các phần tử khác */
+.auth-links a {
+    color: #3a77ca;
+    text-decoration: none;
+    font-size: 16px;
+}
+.auth-links a:hover {
+    color: #2e5d9a;
+}
+.form-check {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.is-invalid {
+    border-color: red;
+}
+
+.is-invalid:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}

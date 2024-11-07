@@ -1,0 +1,17 @@
+/* đồng hồ thông minh */
+
+.khung1 {
+    background-color: #e7eef3;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.khung1 p {
+    color: #1a3d7c;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.khung1 p:hover {
+    color: #989ea5;
+}

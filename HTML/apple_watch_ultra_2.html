@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Watch Ultra 2</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/detail.css">
+    <link rel="stylesheet" href="../CSS/filter.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/home.js"></script>
+    <script src="../JS/loadmore.js"></script>
+
+
+<body>
+    <div class="header-wrapper">
+        <header class="p-3 border-bottom">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="../HTML/home.html">
+                            <img src="../IMAGES/logo.png" alt="Logo" id="logo">
+                        </a>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Bạn cần gì..." aria-label="Search">
+                            <button class="btn btn-light" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                        <div class="auth-links">
+                            <a href="../HTML/register.html">Đăng ký</a>  
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </div>
+
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                                                <input type="text" class="form-control-login" id="loginUsername" placeholder="Nhập tên đăng nhập của bạn" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                                <input type="password" class="form-control-login" id="loginPassword" placeholder="Nhập mật khẩu" required>
+                                            </div>
+                                            <div id="loginError" class="text-danger" style="display: none;">Vui lòng điền tên đăng nhập và mật khẩu.</div>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <a href="../HTML/user.html" class="me-3">
+                                <img src="../IMAGES/nha.png" alt="Người dùng" style="height: 50px;">
+                            </a>
+                            <a href="../HTML/cart.html" class="me-3">
+                                <img src="../IMAGES/giohang.png" alt="Giỏ hàng" style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Loại đồng hồ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/donghothongminh.html">Đồng hồ thông minh</a></li>
+                            <li><a class="dropdown-item" href="../HTML/donghodinhvi.html">Đồng hồ định vị</a></li>
+                            <li><a class="dropdown-item" href="../HTML/daydeo.html">Dây đeo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn thương hiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple.html">Apple Watch</a></li>
+                            <li><a class="dropdown-item" href="../HTML/samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="../HTML/xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="../HTML/garmin.html">Garmin</a></li>
+                            <li><a class="dropdown-item" href="../HTML/amalzit.html">Amalzit</a></li>
+                            <li><a class="dropdown-item" href="../HTML/coros.html">Coros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn theo giá</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/gia_duoi_1tr.html">Dưới 1 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia1_3.html">1 triệu - 3 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia3_5.html">3 triệu - 5 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia5_10.html">5 triệu - 10 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia10_20.html">10 triệu - 20 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia_tren_20tr.html">Trên 20 triệu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Sản phẩm nổi bật</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple_ultra2_filter.html">Apple Watch Ultra 2</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE10_filter.html">Apple Watch Series 10</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE9_filter.html">Apple Watch Series9</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei_FIT3_filter.html">Huawei Watch Fit3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="khung1">
+            <a href="../HTML/home.html">
+                <p>Trang chủ</p>
+            </a>
+            <p> > </p>
+            <a href="../HTML/apple_watch_ultra_2.html">
+                <p>Apple Watch Ultra 2</p>
+            </a>
+
+        </div>
+
+        <main>
+            <h3>Chi tiết sản phẩm</h3>
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="main-image" src="../IMAGES/apple_watch_ultra_2.png" alt="Apple Watch Ultra 2">
+                        <section class="product-thumbnails">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_2_.webp" alt="Apple Watch Ultra 2 Thumbnail 1"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_3_.webp" alt="Apple Watch Ultra 2 Thumbnail 2"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_4_.webp" alt="Apple Watch Ultra 2 Thumbnail 3"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_9_.webp" alt="Apple Watch Ultra 2 Thumbnail 4"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_10_.webp" alt="Apple Watch Ultra 2 Thumbnail 5"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#"><img class="thumbnail" src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_7_.webp" alt="Apple Watch Ultra 2 Thumbnail 6"></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <ul class="product-description">
+                            <h4>Apple Watch Ultra 2</h4>
+                            <li>Lớp vỏ titan cùng mặt kính sapphire cứng cáp, đạt độ bền chuẩn quân đội MIL-STD 810H</li>
+                            <li>Trang bị Esim giúp nghe gọi, nhắn tin mà không cần điện thoại</li>
+                            <li>Chip S9 SiP mạnh mẽ xử lý mọi tác vụ nhanh chóng với nhiều tiện ích</li>
+                            <li>Tích hợp nhiều tính năng sức khỏe như: Đo nhịp tim, điện tâm đồ, đo chu kỳ kinh nguyệt,...</li>
+                            <li>Hỗ trợ nhiều chế độ tập luyện với các môn thể thao như: Bơi lội, lặn, chạy bộ, đạp xe, leo núi,...</li>
+                            <li>Thanh toán mọi thứ ngay từ cổ tay với Apple Pay cực tiện lợi</li>
+                        </ul>
+
+
+                    <div class="col-md-6">
+                        <div class="product-container">
+                            <h3>THÔNG TIN THANH TOÁN</h3>
+
+                            <!-- Chọn màu sắc -->
+                            <div class="color-options">
+                                <h5>Chọn màu sắc:</h5>
+
+                                <!-- Tùy chọn màu 1 -->
+                                <div class="color-option-form" onclick="selectColor(this, 'Trắng')">
+                                    <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g_3__2_1_1.webp" alt="Trắng" style="width: 50px; height: 50px;">
+                                </div>
+
+                                <!-- Tùy chọn màu 2 -->
+                                <div class="color-option-form" onclick="selectColor(this, 'Đỏ')">
+                                    <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-49mm-4g-_2_.webp" alt="Đỏ" style="width: 50px; height: 50px;">
+                                </div>
+
+                                <!-- Tùy chọn màu 3 -->
+                                <div class="color-option-form" onclick="selectColor(this, 'Xanh')">
+                                    <img src="../IMAGES/apple_watch_ultra2_49/text_ng_n_25__7_5.webp" alt="Xanh" style="width: 50px; height: 50px;">
+                                </div>
+                            </div>
+
+                            <!-- Chọn số lượng -->
+                            <div class="quantity-container">
+                                <h5>Chọn số lượng:</h5>
+                                <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                                <span class="quantity-display" id="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                            </div>
+
+                            <div class="price-container">
+                                <span class="price-sale">21.190.000 VND</span>
+                                <span class="price-original">21.990.000 VND</span>
+                            </div>
+                            <!-- Nút thêm vào giỏ hàng và mua ngay -->
+                            <div class="action-buttons-click">
+                                <button id="add-to-cart" class="btn btn-primary">Thêm vào Giỏ hàng</button>
+                                <button class="btn btn-success" onclick="buyNow()">Mua ngay</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div class="container-fluid d-flex justify-content-between">
+        <section class="detailed-description">
+            <h2>Mô tả chi tiết</h2>
+            <p>Đồng hồ Apple Watch Ultra 2 sở hữu khung viền titan sang trọng cùng con chip S9 SiP thế hệ mới mang lại một trải nghiệm dùng ổn định và mượt mà. Đồng hồ với ba phiên bản dây đeo thì hợp cho từng nhu cầu sử dụng khác nhau của người dùng.</p>
+            <button id="view-more-btn" class="loadmore">Xem thêm</button>
+            <div id="more-content" style="display: none;">
+                <h4>Apple Watch Ultra 2 2023 49MM 4G - Hoạt động ổn định với chip S9 SiP</h4>
+                <p>Apple Watch Ultra 2 là phiên bản đồng hồ nâng cấp của Apple Watch Ultra với nhiều nâng cấp vượt trội. Vậy cụ thể mẫu đồng hồ thông minh này có gì nổi bật?</p>
+                <h6>Thiết kế sang trọng, khung viền titan</h6>
+                <p>Đồng hồ thông minh Apple Watch Ultra 2 được trang bị khung viền titan chắc chắn. Đồng hồ với mặt được hoàn thiện phẳng cùng các góc cạnh bo cong nhẹ. Đặc biệt, khung viền được hoàn thiện nhô cao so với màn hình nhờ đó có thể bảo vệ mặt
+                    kính sapphire khỏi các trầy xước không đáng có.</p>
+                <p>Đồng hồ được trang bị hệ thống nút điều khiển vô cùng tiện lợi. Cụ thể, đồng hồ với nút tác vụ với khả năng cài đặt nhiều chức năng sử dụng khác nhau. Các tính năng trên nút tác vụ người dùng có thể tùy chỉnh theo nhu cầu sử dụng như đánh
+                    dấu tọa độ, khởi động bài tập luyện,…</p>
+                <p>Bên cạnh nút tác vụ, đồng hồ còn được trang bị nút sườn với khả năng truy cập nhanh cách tính năng an toàn. Nút Digital Crown với thiết kế cách đường rãnh giúp người dùng có thể thao tác một cách dễ dàng.</p>
+                <p>
+                    Dây Alpine thích hợp để sử dụng trong các chuyến đi chơi ngoài trời <br> Dây Trail thích hợp sử dụng cho các bài tập luyện <br> Dây Ocean thích hợp sử dụng khi tập luyện các môn thể thao dưới nước <br>
+                </p>
+                <div class="img-chitiet">
+                    <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-3.webp" alt="imgchitiet1">
+                </div>
+                <h6>Định vị GPS băng tần kép, định vị chính xác</h6>
+                <p>Đồng hồ thông minh Apple Watch Ultra 2 được trang bị hệ thống GPS băng tần kép nhờ đó có thể định vị chính xác vị trí của người dùng. Cụ thể, thiết bị được tích hợp cả GPS L1 và L5 và anten nhờ đó mang lại phạm vi định vị rộng lơn. Khi
+                    kết hợp hai tần số này, đồng hồ có thể tính toán một cách chính xác khoảng cách, lộ trình cũng như tốc độ. </p>
+                <h6>Viên pin dung lượng lớn, giúp kéo dài thời gian sử dụng của người dùng</h6>
+                <p>Apple Watch Ultra 2 49mm không chỉ là một chiếc đồng hồ thông minh thông thường, mà còn mang đến trải nghiệm sử dụng dài lâu với viên pin dung lượng lớn. Nhờ lõi pin Li-ion và sự hỗ trợ từ chip Apple S9, thời lượng sử dụng của thế hệ smartwatch
+                    nhà Táo này có thể lên đến 36 giờ và thậm chí có thể kéo dài tới 72 giờ khi bật chế độ nguồn điện thấp. </p>
+                <h6>Tuyệt tác đồng hồ cùng chất liệu titan siêu bền</h6>
+                <p>Với phiên bản năm 2024 này, Apple Watch Ultra đã được giới thiệu với vỏ titan mang lại vẻ ngoài sang trọng, mạnh mẽ nhưng vẫn giữ được sự nhẹ nhàng và thoải mái trên cổ tay. Dây cao su đi kèm không chỉ mang lại sự thoải mái mà còn đảm
+                    bảo độ bền khi tiếp xúc với nước và bụi bẩn. Bên cạnh đó, Apple Watch Ultra 2 không chỉ đạt chuẩn kháng nước WR100, mà còn đáp ứng tiêu chuẩn quốc tế EN13319 dành cho thiết bị lặn chuyên dụng.</p>
+                <div class="img-chitiet">
+                    <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-2_1.webp" alt="imgchitiet1">
+                </div>
+                <h6>Đáp ứng mọi môn thể thao cùng thời lượng pin siêu dài</h6>
+                <p>Với thời lượng pin lên đến 36 giờ ở chế độ sử dụng thông thường, <strong>Apple Watch Ultra 2 2024 49mm 4G viền titan dây cao su </strong>đủ sức đồng hành cùng bạn suốt cả ngày. Đặc biệt, khi chuyển sang tiết kiệm pin, thời gian sử dụng
+                    có thể kéo dài lên đến 72 giờ, giúp bạn thoải mái tận hưởng những chuyến đi dài.</p>
+                <div class="img-chitiet">
+                    <img src="../IMAGES/apple_watch_ultra2_49/apple-watch-ultra-2-2024-49mm-4g-vien-titan-day-cao-su-1_1.webp" alt="imgchitiet1">
+                </div>
+                <p>Ngoài ra, nó còn có khả năng theo dõi nhiều môn thể thao và GPS tần số kép chính xác cao. Dù bạn chạy bộ, leo núi hay lặn biển, chiếc đồng hồ này luôn đảm bảo hiệu suất mạnh mẽ, giúp bạn tập trung hoàn toàn vào việc chinh phục các mục
+                    tiêu của mình.</p>
+        </section>
+        <script src="../JS/loadmore.js"></script>
+        <aside class="related-products">
+            <h2>Sản phẩm liên quan</h2>
+            <ul>
+                <li>
+                    <a href="../HTML/samsung_glx_fit3.html"><img src="../IMAGES/glx_fit3/group_563.webp" alt="Samsung Galaxy Fit 3"> Samsung Galaxy Fit 3</a>
+                </li>
+                <li>
+                    <a href="../HTML/apple_SE_9_41.html"><img src="..\IMAGES\apple_watch_series_9\apple_lte_3__1.webp" alt="Samsung Galaxy Fit 3"> Apple Watch Series 9</a>
+                </li>
+                <li>
+                    <a href="../HTML/xiaomi_redmi_w4.html"><img src="..\IMAGES\xiaomi_ redmi_w4\xiaomi_redmi_w4 (6).webp" alt="Garmin Venu 3"> Xiaomi Redmi Watch 4</a>
+                </li>
+            </ul>
+        </aside>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Cột 1: Biểu tượng mạng xã hội -->
+                    <div class="footer-column social-column">
+                        <a href="#"><img src="../IMAGES/fb.png" alt="Facebook" id="fb"></a>
+                        <a href="#"><img src="../IMAGES/tt.png" alt="Twitter" id="tt"></a>
+                        <a href="#"><img src="../IMAGES/ig.png" alt="Instagram" id="ig"></a>
+                    </div>
+
+                    <!-- Cột 2: Liên kết nhanh -->
+                    <div class="footer-column">
+                        <h5>Liên kết nhanh</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../HTML/user.html">Tài khoản của bạn</a></li>
+                            <li><a href="../HTML/cart.html">Xem đơn hàng</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột 3: Thông tin liên hệ -->
+                    <div class="footer-column">
+                        <h5>Thông tin liên hệ</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../HTML/aboutus.html">Về chúng tôi</a></li>
+                            <li><a href="../HTML/owner_info.html">Thông tin công ty</a></li>
+                        </ul>
+                    </div>
+                    
+
+                    <!-- Cột 4: Logo -->
+                    <div class="footer-column logo-column">
+                        <a href="#"><img src="../IMAGES/logo.png" alt="Logo" id="logo_end"></a>
+                    </div>
+                </div>
+
+                <!-- Phần bản quyền -->
+                <div class="footer-copyright">
+                    <p>Bản quyền thuộc về © Ngọc My, Quốc Sáng</p>
+                </div>
+                
+            </div>
+        </footer>
+        <script src="../JS/detail.js"></script>
+</body>
+
+</html>

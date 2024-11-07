@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystalies</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="p-3 border-bottom">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="../HTML/home.html">
+                            <img src="../IMAGES/logo.png" alt="Logo" id="logo">
+                        </a>
+                    </div> 
+                    <div class="flex-grow-1 mx-3">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Bạn cần gì..." aria-label="Search">
+                            <button class="btn btn-light" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                        <div class="auth-links">
+                            <a href="../HTML/register.html">Đăng ký</a>  
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </div>
+
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                                                <input type="text" class="form-control-login" id="loginUsername" placeholder="Nhập tên đăng nhập của bạn" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                                <input type="password" class="form-control-login" id="loginPassword" placeholder="Nhập mật khẩu" required>
+                                            </div>
+                                            <div id="loginError" class="text-danger" style="display: none;">Vui lòng điền tên đăng nhập và mật khẩu.</div>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <a href="../HTML/user.html" class="me-3">
+                                <img src="../IMAGES/nha.png" alt="Người dùng" style="height: 50px;">
+                            </a>
+                            <a href="../HTML/cart.html" class="me-3">
+                                <img src="../IMAGES/giohang.png" alt="Giỏ hàng" style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Loại đồng hồ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/donghothongminh.html">Đồng hồ thông minh</a></li>
+                            <li><a class="dropdown-item" href="../HTML/donghodinhvi.html">Đồng hồ định vị</a></li>
+                            <li><a class="dropdown-item" href="../HTML/daydeo.html">Dây đeo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn thương hiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple.html">Apple Watch</a></li>
+                            <li><a class="dropdown-item" href="../HTML/samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="../HTML/xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="../HTML/garmin.html">Garmin</a></li>
+                            <li><a class="dropdown-item" href="../HTML/amalzit.html">Amalzit</a></li>
+                            <li><a class="dropdown-item" href="../HTML/coros.html">Coros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn theo giá</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/gia_duoi_1tr.html">Dưới 1 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia1_3.html">1 triệu - 3 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia3_5.html">3 triệu - 5 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia5_10.html">5 triệu - 10 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia10_20.html">10 triệu - 20 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia_tren_20tr.html">Trên 20 triệu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Sản phẩm nổi bật</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple_ultra2_filter.html">Apple Watch Ultra 2</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE10_filter.html">Apple Watch Series 10</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE9_filter.html">Apple Watch Series9</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei_FIT3_filter.html">Huawei Watch Fit3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../IMAGES/banner1.jpg" class="d-block w-100 img-fluid" alt="Banner 1" style="width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item">
+                    <img src="../IMAGES/banner2.jpg" class="d-block w-100 img-fluid" alt="Banner 2" style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="../IMAGES/banner3.jpg" class="d-block w-100 img-fluid" alt="Banner 3" style="width: 100%;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="text-center">Sản phẩm nổi bật</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_watch_ultra_2.html">
+                                <img src="../IMAGES/apple_watch_ultra_2.png" alt="Apple Watch Ultra 2" class="product-img">
+                                <h3>Apple Watch Ultra 2 49mm (4G) dây cao su</h3>
+                                <div class="price-container">
+                                    <p class="old-price">21.990.000 VND</p>
+                                    <p class="new-price">21.190.000 VND</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/samsung_glx_fit3.html">
+                                <img src="../IMAGES/samsung_fit3.png" alt="Samsung Galaxy Fit 3" class="product-img">
+                                <h3>Đồng hồ thông minh Samsung Galaxy Fit 3</h3>
+                                <p class="old-price">1.590.000 VND</p>
+                                <p class="new-price">1.390.900 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/xiaomi_redmi_w4.html">
+                                <img src="../IMAGES/xiaomi_watch4.png" alt="Xiaomi Redmi Watch 4" class="product-img">
+                                <h3>Đồng hồ thông minh Xiaomi Redmi Watch 4</h3>
+                                <p class="old-price">2.690.000 VND</p>
+                                <p class="new-price">2.390.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/coros_pace_3.html">
+                                <img src="../IMAGES/coros_pace_3.png" alt="Coros Pace 3" class="product-img">
+                                <h3>Đồng hồ thông minh Coros Pace 3 dây cao su</h3>
+                                <p class="old-price">6.680.000 VND</p>
+                                <p class="new-price">6.180.900 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_watch_ultra_2.html">
+                                <img src="../IMAGES/huawei_fit3.png" alt="Huawei Watch Fit 3" class="product-img">
+                                <h3>Đồng hồ thông minh Huawei Watch Fit 3</h3>
+                                <p class="old-price">2.990.000 VND</p>
+                                <p class="new-price">2.790.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/samsung_glx_fit3.html">
+                                <img src="../IMAGES/amalzit_2.png" alt="Huami Amazfit GTS 2" class="product-img">
+                                <h3>Đồng hồ thông minh Huami Amazfit GTS 2</h3>
+                                <p class="old-price">3.990.000 VND</p>
+                                <p class="new-price">1.690.900 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/xiaomi_redmi_w4.html">
+                                <img src="../IMAGES/watch_se2022.png" alt="Apple Watch SE 2022" class="product-img">
+                                <h3>Apple Watch SE 2022 40mm (4G) - Viền nhôm - Cao su</h3>
+                                <p class="old-price">7.490.000 VND</p>
+                                <p class="new-price">5.690.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/coros_pace_3.html">
+                                <img src="../IMAGES/apple_series9X.png" alt="Apple Watch Series 9" class="product-img">
+                                <h3>Apple Watch Series 9 45mm (4G) viền nhôm dây cao su</h3>
+                                <p class="old-price">13.990.000 VND</p>
+                                <p class="new-price">13.490.900 VND</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products-1">
+            <div class="container">
+                <h2>Gợi ý hôm nay</h2>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_SE_9_41.html">
+                                <img src="../IMAGES/apple_series9.png" alt="Apple Watch Series 9" class="product-img">
+                                <h3>Apple Watch Series 9 41mm (GPS)</h3>
+                                <div class="price-container">
+                                    <p class="old-price">10.490.000 VND</p>
+                                    <p class="new-price">9.390.000 VND</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/xiaomi_miband_8.html">
+                                <img src="../IMAGES/xiaomi_band8.png" alt="Xiaomi Mi Band 8" class="product-img">
+                                <h3>Vòng đeo tay thông minh Xiaomi Mi Band 8</h3>
+                                <p class="old-price">990.000 VND</p>
+                                <p class="new-price">790.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/huawei_watch_kids4_pro.html">
+                                <img src="../IMAGES/huawei_kids4_.png" alt="Huawei Watch Kids4 Pro" class="product-img">
+                                <h3>Đồng hồ định vị trẻ em Huawei Watch Kids4 Pro</h3>
+                                <p class="old-price">3.490.000 VND</p>
+                                <p class="new-price">2.790.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/samsung_glx_watch_ultra.html">
+                                <img src="../IMAGES/galaxy_ultra.png" alt="Galaxy Watch Ultra" class="product-img">
+                                <h3>Đồng hồ thông minh Samsung Galaxy Watch Ultra</h3>
+                                <p class="old-price">17.090.000 VND</p>
+                                <p class="new-price">16.990.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_watch_ultra_2.html">
+                                <img src="../IMAGES/apple-watch-se.png" alt="Apple Watch SE 2 2023" class="product-img">
+                                <h3>Apple Watch SE 2 2023 40mm (GPS) viền nhôm</h3>
+                                <p class="old-price">6.390.000 VND</p>
+                                <p class="new-price">5.890.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_SE_9_41.html">
+                                <img src="../IMAGES/apple_watch_ultra_2.png" alt="Apple Watch Ultra 2" class="product-img">
+                                <h3>Apple Watch Ultra 2 49mm (4G) dây cao su</h3>
+                                <p class="old-price">21.990.000 VND</p>
+                                <p class="new-price">21.190.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/huawei_watch_kids4_pro.html">
+                                <img src="../IMAGES/apple_series9H.png" alt="Apple Watch Series 9 41mm" class="product-img">
+                                <h3>Apple Watch Series 9 41mm (4G) viền nhôm dây cao su</h3>
+                                <p class="old-price">13.090.000 VND</p>
+                                <p class="new-price">12.390.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/samsung_glx_watch_ultra.html">
+                                <img src="../IMAGES/garmin_3.png" alt="Garmin Venu 3" class="product-img">
+                                <h3>Đồng hồ thông minh Garmin Venu 3</h3>
+                                <p class="old-price">12.290.000 VND</p>
+                                <p class="new-price">11.670.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_watch_ultra_2.html">
+                                <img src="../IMAGES/day_deo_garmin.png" alt="Dây đeo đồng hồ Garmin" class="product-img">
+                                <h3>Dây đeo đồng hồ Garmin Silicon 22mm cho Garmin</h3>
+                                <p class="old-price">300.000 VND</p>
+                                <p class="new-price">250.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/samsung_glx_fit3.html">
+                                <img src="../IMAGES/huawei_watch_ultimate.png" alt="Huawei Watch Ultimate" class="product-img">
+                                <h3>Đồng hồ thông minh Huawei Watch Ultimate</h3>
+                                <p class="old-price">19.990.000 VND</p>
+                                <p class="new-price">17.990.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/xiaomi_redmi_w4.html">
+                                <img src="../IMAGES/smart_hẻo10.png" alt="Masstel Smart Hero 10" class="product-img">
+                                <h3>Đồng hồ định vị trẻ em Masstel Smart Hero 10</h3>
+                                <p class="old-price">1.690.000 VND</p>
+                                <p class="new-price">1.520.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/coros_pace_3.html">
+                                <img src="../IMAGES/huawei_gt4.png" alt="Huawei Watch GT4" class="product-img">
+                                <h3>Đồng hồ thông minh Huawei Watch GT4 dây silicone</h3>
+                                <p class="old-price">5.990.000 VND</p>
+                                <p class="new-price">4.490.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card">
+                            <a href="../HTML/apple_SE_9_41.html">
+                                <img src="../IMAGES/apple_SE10_mauden.png" alt="Apple Watch Series 10 46mm" class="product-img">
+                                <h3>Apple Watch Series 10 46mm (GPS) Viền Nhôm Dây Cao Su Size S/M</h3>
+                                <p class="old-price">11.990.000 VND</p>
+                                <p class="new-price">11.790.000 VND</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Cột 1: Biểu tượng mạng xã hội -->
+                    <div class="footer-column social-column">
+                        <a href="#"><img src="../IMAGES/fb.png" alt="Facebook" id="fb"></a>
+                        <a href="#"><img src="../IMAGES/tt.png" alt="Twitter" id="tt"></a>
+                        <a href="#"><img src="../IMAGES/ig.png" alt="Instagram" id="ig"></a>
+                    </div>
+
+                    <!-- Cột 2: Liên kết nhanh -->
+                    <div class="footer-column">
+                        <h5>Liên kết nhanh</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../HTML/user.html">Tài khoản của bạn</a></li>
+                            <li><a href="../HTML/cart.html">Xem đơn hàng</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột 3: Thông tin liên hệ -->
+                    <div class="footer-column">
+                        <h5>Thông tin liên hệ</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../HTML/aboutus.html">Về chúng tôi</a></li>
+                            <li><a href="../HTML/owner_info.html">Thông tin công ty</a></li>
+                        </ul>
+                    </div>
+
+
+                    <!-- Cột 4: Logo -->
+                    <div class="footer-column logo-column">
+                        <a href="#"><img src="../IMAGES/logo.png" alt="Logo" id="logo_end"></a>
+                    </div>
+                </div>
+
+                <!-- Phần bản quyền -->
+                <div class="footer-copyright">
+                    <p>Bản quyền thuộc về © Ngọc My, Quốc Sáng</p>
+                </div>
+                
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

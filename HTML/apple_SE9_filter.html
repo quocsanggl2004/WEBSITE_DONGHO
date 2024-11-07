@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Watch Series 10</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/filter.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/home.js"></script>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="p-3 border-bottom">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="../HTML/home.html">
+                            <img src="../IMAGES/logo.png" alt="Logo" id="logo">
+                        </a>
+                    </div>
+                    <div class="flex-grow-1 mx-3">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Bạn cần gì..." aria-label="Search">
+                            <button class="btn btn-light" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                        <div class="auth-links">
+                            <a href="../HTML/register.html">Đăng ký</a>  
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </div>
+
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                                                <input type="text" class="form-control-login" id="loginUsername" placeholder="Nhập tên đăng nhập của bạn" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                                <input type="password" class="form-control-login" id="loginPassword" placeholder="Nhập mật khẩu" required>
+                                            </div>
+                                            <div id="loginError" class="text-danger" style="display: none;">Vui lòng điền tên đăng nhập và mật khẩu.</div>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <a href="../HTML/user.html" class="me-3">
+                                <img src="../IMAGES/nha.png" alt="Người dùng" style="height: 50px;">
+                            </a>
+                            <a href="../HTML/cart.html" class="me-3">
+                                <img src="../IMAGES/giohang.png" alt="Giỏ hàng" style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Loại đồng hồ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/donghothongminh.html">Đồng hồ thông minh</a></li>
+                            <li><a class="dropdown-item" href="../HTML/donghodinhvi.html">Đồng hồ định vị</a></li>
+                            <li><a class="dropdown-item" href="../HTML/daydeo.html">Dây đeo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn thương hiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple.html">Apple Watch</a></li>
+                            <li><a class="dropdown-item" href="../HTML/samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="../HTML/xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="../HTML/garmin.html">Garmin</a></li>
+                            <li><a class="dropdown-item" href="../HTML/amalzit.html">Amalzit</a></li>
+                            <li><a class="dropdown-item" href="../HTML/coros.html">Coros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Chọn theo giá</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/gia_duoi_1tr.html">Dưới 1 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia1_3.html">1 triệu - 3 triệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia3_5.html">3 triệu - 5 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia5_10.html">5 triệu - 10 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia10_20.html">10 triệu - 20 trệu</a></li>
+                            <li><a class="dropdown-item" href="../HTML/gia_tren_20tr.html">Trên 20 triệu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Sản phẩm nổi bật</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../HTML/apple_ultra2_filter.html">Apple Watch Ultra 2</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE10_filter.html">Apple Watch Series 10</a></li>
+                            <li><a class="dropdown-item" href="../HTML/apple_SE9_filter.html">Apple Watch Series9</a></li>
+                            <li><a class="dropdown-item" href="../HTML/huawei_FIT3_filter.html">Huawei Watch Fit3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="khung1">
+            <a href="../HTML/home.html">
+                <p>Trang chủ</p>
+            </a>
+            <p> > </p>
+            <a href="../HTML/apple_SE9.html">
+                <p>Apple Watch Series 9</p>
+            </a>
+        </div>
+    </div>
+
+    <section class="featured-products-1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <a href="../HTML/apple_SE_9_41.html">
+                            <img src="../IMAGES/apple_series9X.png" alt="Apple Watch Series 9" class="product-img">
+                            <h3>Apple Watch Series 9 45mm (4G) viền nhôm dây cao su</h3>
+                            <p class="old-price">13.990.000 VND</p>
+                            <p class="new-price">13.490.900 VND</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <a href="../HTML/apple_watch_ultra_2.html">
+                            <img src="../IMAGES/apple_series9H.png" alt="Apple Watch Series 9 41mm" class="product-img">
+                            <h3>Apple Watch Series 9 41mm (4G) viền nhôm dây cao su</h3>
+                            <p class="old-price">13.090.000 VND</p>
+                            <p class="new-price">12.390.000 VND</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Cột 1: Biểu tượng mạng xã hội -->
+                <div class="footer-column social-column">
+                    <a href="#"><img src="../IMAGES/fb.png" alt="Facebook" id="fb"></a>
+                    <a href="#"><img src="../IMAGES/tt.png" alt="Twitter" id="tt"></a>
+                    <a href="#"><img src="../IMAGES/ig.png" alt="Instagram" id="ig"></a>
+                </div>
+
+                <!-- Cột 2: Liên kết nhanh -->
+                <div class="footer-column">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../HTML/user.html">Tài khoản của bạn</a></li>
+                        <li><a href="../HTML/cart.html">Xem đơn hàng</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Cột 3: Thông tin liên hệ -->
+                <div class="footer-column">
+                    <h5>Thông tin liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../HTML/aboutus.html">Về chúng tôi</a></li>
+                        <li><a href="../HTML/owner_info.html">Thông tin công ty</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Cột 4: Logo -->
+                <div class="footer-column logo-column">
+                    <a href="#"><img src="../IMAGES/logo.png" alt="Logo" id="logo_end"></a>
+                </div>
+            </div>
+
+            <!-- Phần bản quyền -->
+            <div class="footer-copyright">
+                <p>Bản quyền thuộc về © Ngọc My, Quốc Sáng</p>
+            </div>
+            
+        </div>
+    </footer>
+
+    </div>
+</body>
+
+</html>
